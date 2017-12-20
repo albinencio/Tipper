@@ -67,7 +67,7 @@
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="w8D-AJ-9W0"/>
                                 </connections>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" id="lmZ-An-wjF">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" id="lmZ-An-wjF">
                                 <rect key="frame" x="51" y="276" width="277" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
@@ -95,6 +95,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="wCB-G3-LRD" id="lza-B7-4Yq"/>
+                        <outlet property="settingsButton" destination="MkK-Xp-mSN" id="e4E-at-4Z7"/>
                         <outlet property="tipControl" destination="lmZ-An-wjF" id="p06-Ip-0Aw"/>
                         <outlet property="tipLabel" destination="cFt-0y-Ewv" id="ZMh-px-mns"/>
                         <outlet property="totalLabel" destination="716-9T-PYj" id="GfL-ww-dsq"/>
@@ -125,18 +126,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="4ZL-eV-LfX">
-                                <rect key="frame" x="16" y="127" width="343" height="29"/>
+                                <rect key="frame" x="16" y="125" width="343" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="15%"/>
                                     <segment title="18%"/>
                                     <segment title="20%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="setDefault2:" destination="i18-Qu-z20" eventType="valueChanged" id="b86-UO-piP"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="2vf-fn-IaM"/>
+                    <connections>
+                        <outlet property="tipControl" destination="4ZL-eV-LfX" id="Vaa-RR-edo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xbc-Mb-wZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

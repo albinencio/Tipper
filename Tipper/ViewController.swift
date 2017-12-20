@@ -10,14 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let defaults:UserDefaults = UserDefaults.standard
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var settingsButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let defaultTipIndex = defaults.integer(forKey: "defaultTipIndex")
+        tipControl.selectedSegmentIndex = defaultTipIndex
+        //TODO
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +39,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateTip(_ sender: Any) {
-        
         let tipPercentages = [0.15, 0.18, 0.20]
         
         let bill = Double(billField.text!) ?? 0
