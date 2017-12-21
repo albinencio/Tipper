@@ -11,7 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     let defaults:UserDefaults = UserDefaults.standard
-    @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var tipControl: CustomSegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func setDefault2(_ sender: Any) {
+    @IBAction func setDefault(_ sender: Any) {
         defaults.set(tipControl.selectedSegmentIndex, forKey: "defaultTipIndex")
         defaults.synchronize()
     }

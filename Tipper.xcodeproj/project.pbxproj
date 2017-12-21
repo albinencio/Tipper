@@ -15,6 +15,7 @@
 		D306FDE71FE811DA00103574 /* TipperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D306FDE61FE811DA00103574 /* TipperTests.swift */; };
 		D306FDF21FE811DA00103574 /* TipperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D306FDF11FE811DA00103574 /* TipperUITests.swift */; };
 		D3301FAA1FE835EE00D78583 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3301FA91FE835EE00D78583 /* SettingsViewController.swift */; };
+		D37C9CE61FEAE17600DAC6BD /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37C9CE51FEAE17600DAC6BD /* CustomSegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D306FDF11FE811DA00103574 /* TipperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipperUITests.swift; sourceTree = "<group>"; };
 		D306FDF31FE811DA00103574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3301FA91FE835EE00D78583 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D37C9CE51FEAE17600DAC6BD /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				D306FDD01FE811D900103574 /* Tipper */,
+				D37C9CE41FEAE11400DAC6BD /* Resources */,
 				D306FDE51FE811DA00103574 /* TipperTests */,
 				D306FDF01FE811DA00103574 /* TipperUITests */,
 				D306FDCF1FE811D900103574 /* Products */,
@@ -126,6 +129,14 @@
 				D306FDF31FE811DA00103574 /* Info.plist */,
 			);
 			path = TipperUITests;
+			sourceTree = "<group>";
+		};
+		D37C9CE41FEAE11400DAC6BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D37C9CE51FEAE17600DAC6BD /* CustomSegmentedControl.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 				D306FDD41FE811D900103574 /* ViewController.swift in Sources */,
 				D306FDD21FE811D900103574 /* AppDelegate.swift in Sources */,
 				D3301FAA1FE835EE00D78583 /* SettingsViewController.swift in Sources */,
+				D37C9CE61FEAE17600DAC6BD /* CustomSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

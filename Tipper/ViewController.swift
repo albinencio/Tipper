@@ -12,9 +12,8 @@ class ViewController: UIViewController {
 
     let defaults:UserDefaults = UserDefaults.standard
     @IBOutlet weak var billField: UITextField!
-    @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
-    @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var tipControl: CustomSegmentedControl!
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -45,7 +44,6 @@ class ViewController: UIViewController {
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
         
-        tipLabel.text = String.init(format: "$%.2f", tip)
         totalLabel.text = String.init(format: "$%.2f", total)
     }
 }

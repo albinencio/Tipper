@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] Custom segmented control to have a better design. Implemented following [this tutorial](https://www.youtube.com/watch?v=xGdRCUrSu94)
 
 ## Video Walkthrough 
 
