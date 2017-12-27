@@ -15,7 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: CustomSegmentedControl!
     @IBOutlet weak var settingsButton: UIBarButtonItem!
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var peopleLabel: UILabel!
+    @IBOutlet weak var splitLabel: UILabel!
     
+    var total = 0.0
     var billFieldValue = 0.0
     
     override func viewDidLoad() {
@@ -56,14 +60,32 @@ class ViewController: UIViewController {
         
         let bill = billFieldValue
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
-        let total = bill + tip
+        total = bill + tip
         
         let formatter = NumberFormatter()
         formatter.numberStyle = .currencyAccounting
         formatter.locale = NSLocale.current
-        formatter .maximumFractionDigits = 2
-        formatter .minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
         totalLabel.text = formatter.string(from: NSNumber(value: total))
+        
+        calculateSplitTip(self)
+    }
+    
+    @IBAction func calculateSplitTip(_ sender: Any) {
+        let splitTotal = total / Double(Int(slider.value))
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currencyAccounting
+        formatter.locale = NSLocale.current
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        splitLabel.text = formatter.string(from: NSNumber(value: splitTotal))
+    }
+    
+    @IBAction func editPeople(_ sender: Any) {
+        let value = Int(slider.value)
+        peopleLabel.text = String(value)
     }
     
 }

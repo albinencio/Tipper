@@ -13,6 +13,7 @@ class CustomSegmentedControl: UIControl {
 
     var buttons = [UIButton]()
     var selector: UIView!
+    var prevSelected = 0
     
     @IBInspectable
     var borderWidth: CGFloat = 0 {
@@ -87,12 +88,14 @@ class CustomSegmentedControl: UIControl {
         }
         
         let selectorWidth = frame.width / CGFloat(buttonTitles.count)
-        selector = UIView(frame: CGRect(x: CGFloat(selectedSegmentIndex) * selectorWidth, y: 0, width: selectorWidth, height: frame.height))
+        selector = UIView(frame: CGRect(x: CGFloat(prevSelected) * selectorWidth, y: 0, width: selectorWidth, height: frame.height))
         selector.layer.cornerRadius = frame.height / 2
         selector.backgroundColor = selectorColor
         addSubview(selector)
+        UIView.animate(withDuration: 0.3, animations: { self.selector.frame.origin.x = CGFloat(self.selectedSegmentIndex) * selectorWidth })
         
         buttons[selectedSegmentIndex].setTitleColor(selectorTextColor, for: .normal)
+        prevSelected = selectedSegmentIndex
         
         let sv = UIStackView(arrangedSubviews: buttons)
         sv.axis = .horizontal
