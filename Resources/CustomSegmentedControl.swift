@@ -13,7 +13,6 @@ class CustomSegmentedControl: UIControl {
 
     var buttons = [UIButton]()
     var selector: UIView!
-    var selectedSegmentIndex = 0
     
     @IBInspectable
     var borderWidth: CGFloat = 0 {
@@ -44,6 +43,13 @@ class CustomSegmentedControl: UIControl {
     }
     
     @IBInspectable
+    var textSize: CGFloat = 17.0 {
+        didSet {
+            updateView()
+        }
+    }
+    
+    @IBInspectable
     var selectorColor: UIColor = .darkGray {
         didSet {
             updateView()
@@ -52,6 +58,13 @@ class CustomSegmentedControl: UIControl {
     
     @IBInspectable
     var selectorTextColor: UIColor = .white {
+        didSet {
+            updateView()
+        }
+    }
+    
+    @IBInspectable
+    var selectedSegmentIndex: Int = 0 {
         didSet {
             updateView()
         }
@@ -66,18 +79,20 @@ class CustomSegmentedControl: UIControl {
         for buttonTitle in buttonTitles {
             let button = UIButton(type: .system)
             button.setTitle(buttonTitle, for: .normal)
+            button.titleLabel?.font = UIFont .systemFont(ofSize: textSize)
             button.setTitleColor(textColor, for: .normal)
+            
             button.addTarget(self, action: #selector(buttonTapped(button:)), for: .touchUpInside)
             buttons.append(button)
         }
         
         let selectorWidth = frame.width / CGFloat(buttonTitles.count)
-        selector = UIView(frame: CGRect(x: 0, y: 0, width: selectorWidth, height: frame.height))
+        selector = UIView(frame: CGRect(x: CGFloat(selectedSegmentIndex) * selectorWidth, y: 0, width: selectorWidth, height: frame.height))
         selector.layer.cornerRadius = frame.height / 2
         selector.backgroundColor = selectorColor
         addSubview(selector)
         
-        buttons[0].setTitleColor(selectorTextColor, for: .normal)
+        buttons[selectedSegmentIndex].setTitleColor(selectorTextColor, for: .normal)
         
         let sv = UIStackView(arrangedSubviews: buttons)
         sv.axis = .horizontal
@@ -91,16 +106,13 @@ class CustomSegmentedControl: UIControl {
         sv.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
     }
     
+    
     @objc func buttonTapped(button: UIButton) {
         for (btnIndex, btn) in buttons.enumerated() {
             btn.setTitleColor(textColor, for: .normal)
             
             if btn == button {
                 selectedSegmentIndex = btnIndex
-                let selectorStartPosition = frame.width / CGFloat(buttons.count) * CGFloat(btnIndex)
-                UIView.animate(withDuration: 0.3, animations: { self.selector.frame.origin.x = selectorStartPosition })
-                
-                btn.setTitleColor(selectorTextColor, for: .normal)
             }
         }
         

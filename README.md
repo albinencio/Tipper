@@ -4,7 +4,7 @@
 
 Submitted by: **Alberto Nencioni**
 
-Time spent: **10** hours spent in total
+Time spent: **15** hours spent in total
 
 ## User Stories
 
@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Custom segmented control to have a better design. Implemented following [this tutorial](https://www.youtube.com/watch?v=xGdRCUrSu94)
+- [x] Custom segmented control to have a better design. Implemented following [this tutorial](https://www.youtube.com/watch?v=xGdRCUrSu94).
 
 ## Video Walkthrough 
 
