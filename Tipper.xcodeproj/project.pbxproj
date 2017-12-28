@@ -12,8 +12,6 @@
 		D306FDD71FE811D900103574 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D306FDD51FE811D900103574 /* Main.storyboard */; };
 		D306FDD91FE811D900103574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D306FDD81FE811D900103574 /* Assets.xcassets */; };
 		D306FDDC1FE811D900103574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D306FDDA1FE811D900103574 /* LaunchScreen.storyboard */; };
-		D306FDE71FE811DA00103574 /* TipperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D306FDE61FE811DA00103574 /* TipperTests.swift */; };
-		D306FDF21FE811DA00103574 /* TipperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D306FDF11FE811DA00103574 /* TipperUITests.swift */; };
 		D3301FAA1FE835EE00D78583 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3301FA91FE835EE00D78583 /* SettingsViewController.swift */; };
 		D37C9CE61FEAE17600DAC6BD /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37C9CE51FEAE17600DAC6BD /* CustomSegmentedControl.swift */; };
 /* End PBXBuildFile section */
@@ -44,11 +42,7 @@
 		D306FDDB1FE811D900103574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D306FDDD1FE811D900103574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D306FDE21FE811DA00103574 /* TipperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D306FDE61FE811DA00103574 /* TipperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipperTests.swift; sourceTree = "<group>"; };
-		D306FDE81FE811DA00103574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D306FDED1FE811DA00103574 /* TipperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D306FDF11FE811DA00103574 /* TipperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipperUITests.swift; sourceTree = "<group>"; };
-		D306FDF31FE811DA00103574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3301FA91FE835EE00D78583 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D37C9CE51FEAE17600DAC6BD /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,8 +77,6 @@
 			children = (
 				D306FDD01FE811D900103574 /* Tipper */,
 				D37C9CE41FEAE11400DAC6BD /* Resources */,
-				D306FDE51FE811DA00103574 /* TipperTests */,
-				D306FDF01FE811DA00103574 /* TipperUITests */,
 				D306FDCF1FE811D900103574 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,24 +103,6 @@
 				D306FDDD1FE811D900103574 /* Info.plist */,
 			);
 			path = Tipper;
-			sourceTree = "<group>";
-		};
-		D306FDE51FE811DA00103574 /* TipperTests */ = {
-			isa = PBXGroup;
-			children = (
-				D306FDE61FE811DA00103574 /* TipperTests.swift */,
-				D306FDE81FE811DA00103574 /* Info.plist */,
-			);
-			path = TipperTests;
-			sourceTree = "<group>";
-		};
-		D306FDF01FE811DA00103574 /* TipperUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D306FDF11FE811DA00103574 /* TipperUITests.swift */,
-				D306FDF31FE811DA00103574 /* Info.plist */,
-			);
-			path = TipperUITests;
 			sourceTree = "<group>";
 		};
 		D37C9CE41FEAE11400DAC6BD /* Resources */ = {
@@ -284,7 +258,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D306FDE71FE811DA00103574 /* TipperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D306FDF21FE811DA00103574 /* TipperUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
