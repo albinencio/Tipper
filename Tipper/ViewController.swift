@@ -33,8 +33,12 @@ class ViewController: UIViewController {
         billField.becomeFirstResponder()
         let defaultTipIndex = defaults.integer(forKey: "defaultTipIndex")
         tipControl.selectedSegmentIndex = defaultTipIndex
+        let defaultGroupSize = defaults.integer(forKey: "defaultGroupSize")
+        if defaultGroupSize != 0 {
+            slider.value = Float(defaultGroupSize)
+            peopleLabel.text = String(defaultGroupSize)
+        }
         calculateTip(self)
-        //TODO
     }
 
     override func didReceiveMemoryWarning() {

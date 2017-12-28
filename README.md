@@ -4,7 +4,7 @@
 
 Submitted by: **Alberto Nencioni**
 
-Time spent: **15** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
@@ -23,6 +23,7 @@ The following **additional** features are implemented:
 
 - [x] Custom segmented control to have a better, personalized design. Implemented following [this tutorial](https://www.youtube.com/watch?v=xGdRCUrSu94).
 - [x] Slider to see amount when splitting bill with 2 to 10 people.
+- [x] Settings page to change the default group size.
 
 ## Video Walkthrough 
 
@@ -34,7 +35,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+This was my very first exposure to iOS development, therefore I took most of the time to try to understand the basics, aside from following the guidelines provided. The most challenging part was definitely trying to implement a customized segmented control, especially since I had to adjust what I had programmed following the tutorial to what was required by the app's implementation.
+The main change I had to make, which was the origin to the other adjustments I had to deal with, was to instantiate the selectedSegmentIndex variable so that it would have called updateView() every time it was set. This was the optimal solution which allowed for a correct behavior when switching from the Settings to the Tip Calculator view: the segmented control inside Tip Calculator reflected the changes made in Settings.
+Overall, the more I worked on the project, the more comfortable I felt with what I was doing, the more easily I completed and added the new features.
 
 ## License
 

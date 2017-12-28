@@ -12,6 +12,8 @@ class SettingsViewController: UIViewController {
 
     let defaults:UserDefaults = UserDefaults.standard
     @IBOutlet weak var tipControl: CustomSegmentedControl!
+    @IBOutlet weak var groupSlider: UISlider!
+    @IBOutlet weak var groupLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,11 @@ class SettingsViewController: UIViewController {
         super.viewWillAppear(animated)
         let defaultTipIndex = defaults.integer(forKey: "defaultTipIndex")
         tipControl.selectedSegmentIndex = defaultTipIndex
+        let defaultGroupSize = defaults.integer(forKey: "defaultGroupSize")
+        if defaultGroupSize != 0 {
+            groupSlider.value = Float(defaultGroupSize)
+            groupLabel.text = String(defaultGroupSize)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +37,8 @@ class SettingsViewController: UIViewController {
     
     @IBAction func setDefault(_ sender: Any) {
         defaults.set(tipControl.selectedSegmentIndex, forKey: "defaultTipIndex")
+        groupLabel.text = String(Int(groupSlider.value))
+        defaults.set(Int(groupSlider.value), forKey: "defaultGroupSize")
         defaults.synchronize()
     }
 }
