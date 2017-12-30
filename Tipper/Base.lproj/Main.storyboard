@@ -108,7 +108,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="wCB-G3-LRD" id="lza-B7-4Yq"/>
-                        <outlet property="peopleLabel" destination="tDt-OU-b8F" id="3kc-9d-bMo"/>
+                        <outlet property="groupLabel" destination="tDt-OU-b8F" id="aJ3-XA-swm"/>
                         <outlet property="settingsButton" destination="MkK-Xp-mSN" id="e4E-at-4Z7"/>
                         <outlet property="slider" destination="bt2-XI-shr" id="tNK-Br-TnG"/>
                         <outlet property="splitLabel" destination="5K9-AM-ZhB" id="dLD-Hs-QSH"/>
